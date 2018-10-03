@@ -40,10 +40,7 @@ public class Main {
 	public static CommonProxy proxy;
 	@Mod.EventBusSubscriber
 	public static class RegistrationHandler{
-		@SubscribeEvent
-		public void onModelLoad(ModelRegistryEvent e) {
-		  ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(ModBlocks.ruby_block), 0, new ModelResourceLocation("inventory"));
-		}
+
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
 			ModItems.register(event.getRegistry());
