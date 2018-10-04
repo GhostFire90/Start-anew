@@ -1,5 +1,6 @@
 package com.GhostFire.StartAnew;
 
+import com.GhostFire.StartAnew.blocks.BlockBase;
 import com.GhostFire.StartAnew.blocks.ModBlocks;
 import com.GhostFire.StartAnew.items.ModItems;
 import com.GhostFire.StartAnew.proxy.CommonProxy;
@@ -40,7 +41,8 @@ public class Main {
 	public static CommonProxy proxy;
 	@Mod.EventBusSubscriber
 	public static class RegistrationHandler{
-
+	
+		
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
 			ModItems.register(event.getRegistry());
@@ -53,7 +55,8 @@ public class Main {
 		@SubscribeEvent
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
 			ModBlocks.register(event.getRegistry());
-			ModBlocks.registerModels();
+			
+			
 		}
 	}
 }

@@ -12,10 +12,12 @@ public class ModBlocks {
 	public static void register(IForgeRegistry<Block> registry) {
 			registry.registerAll(
 					ruby_block);
+			
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
 		registry.registerAll(ruby_block.createItemBlock());
+		Item.getItemFromBlock(ruby_block);
 	}
 
 	public static void registerModels() {

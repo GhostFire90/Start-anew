@@ -1,5 +1,6 @@
 {
     "variants": {
-        "normal": { "model": "sam:ruby_block" }
+        "normal": { "model": "sam:ruby_block" },
+        "inventory":{"model":"sam:item/ruby_block"}
     }
 }

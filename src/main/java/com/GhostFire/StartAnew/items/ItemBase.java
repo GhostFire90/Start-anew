@@ -10,7 +10,7 @@ public class ItemBase extends Item{
 	public ItemBase(String name) {
 		this.name = name;
 		setUnlocalizedName(name);
-		setRegistryName(name);
+		setRegistryName("sam:" + name);
 	}
 	public void registerModels() {
 		Main.proxy.registerItemRenderer(this, 0, "inventory");

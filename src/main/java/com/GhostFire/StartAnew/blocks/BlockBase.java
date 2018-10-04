@@ -4,6 +4,7 @@ import com.GhostFire.StartAnew.Main;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
@@ -18,16 +19,20 @@ public class BlockBase extends Block {
 		this.name = name;
 	
 		setUnlocalizedName(name);
-		setRegistryName(name);
+		setRegistryName("sam:" + name);
 	}
 	
 	public void registerItemModel(Item itemBlock) {
 		Main.proxy.registerItemRenderer(itemBlock, 0, name);
 		
+		
 	}
 	
 	public Item createItemBlock() {
+		
 		return new ItemBlock(this).setRegistryName(getRegistryName());
+		 
+		
 	}
 	
 	@Override
